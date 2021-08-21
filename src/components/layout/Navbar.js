@@ -24,7 +24,6 @@ const Navbar = ({icon, title}) => {
     )
 }
 
-export default Navbar
 
 Navbar.defaultProps = {
     title: 'Github Finder App',
@@ -37,4 +36,5 @@ Navbar.propTypes = {
     icon: PropTypes.string
 }
 
-   
+
+export default Navbar

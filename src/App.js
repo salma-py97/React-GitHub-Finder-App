@@ -30,6 +30,7 @@ const App = () => {
                 {/* When there are no props we can create a route for a component like this */}
                 <Route exact path="/" component={Home}/>
                 <Route exact path="/about" component={About} />
+                
                 <Route exact path='/user/:login' component={User} />
 
                 {/* Not Found At the end !!! */}

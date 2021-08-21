@@ -15,10 +15,11 @@ import GithubContext from '../../context/github/githubContext'
 const User = ({match}) => {
     // init githubContext
     const githubContext = useContext(GithubContext);
-
     // Destructuring githubContext
     const {user, loading, getUser, getUserRepos, repos} = githubContext;
 
+    const {name, avatar_url, location, bio, blog, login, html_url, followers, following, public_repos, public_gists, hireable, company} = user;
+    
     // when you want a function to run when the component mounts
     useEffect(()=> {
         getUser(match.params.login)
@@ -26,7 +27,6 @@ const User = ({match}) => {
         // eslint-disable-next-line
     }, [])
     
-    const {name, avatar_url, location, bio, blog, login, html_url, followers, following, public_repos, public_gists, hireable, company} = user;
 
     if (loading) {
         <Spinner />
